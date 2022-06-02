@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/scorecard.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+  <script type = "text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+      <h2 class="heading">Final Score: {{final_score}}</h2>
+<label id="score" style="display:none">{{final_score}}</label>
+<div class="speedbox">
+  <div class="speedbox__score" id="speedbox-score"></div>
+  <div class="speedbox__groove"></div>
+  <div class="speedbox__odo">
+    <div class="speedbox__ping"><i class="fa fa-arrow-circle-down"></i> 300</div>
+    <div class="speedbox__up"><i class="fa fa-arrow-circle-up"></i> 850</div>
+    <div class="speedbox__down"><i class="fa-solid fa-bullseye-arrow"></i> {{final_score}}</div>
+  </div>
+  <!-- <i class="fa-solid fa-bullseye-arrow"></i> -->
+  <div class="speedbox__base"></div>
+
+</div>
+</div>
+<script src="{{url_for('static', filename='js/scorecard.js')}}"></script>
+</body>
+
+</html>
+
+
